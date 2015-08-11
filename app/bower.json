@@ -1,0 +1,19 @@
+{
+  "name": "todo-app",
+  "version": "1",
+  "authors": [
+    "harish <harish.nagaraj@blackbookactivator.com>"
+  ],
+  "description": "test app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3"
+  }
+}
