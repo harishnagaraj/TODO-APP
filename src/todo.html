@@ -1,0 +1,28 @@
+<!doctype>
+<html lang="en" ng-app="ToDo">
+<head>
+    <meta characterset ="UTF-8">
+    <title> todo </title>
+    <style>
+        .done{color:#ccc;}
+    </style>
+</head>
+<body>
+    <div ng-controller="todoController">
+        <form name="frm" ng-submit="addTodo()">
+            <input type="text" ng-model="newTodo" required />
+            <button ng-disabled="frm.$invalid"> Go </button>
+        </form>
+        <button ng-click="clearCompleted()">Clear Completed</button>
+        <ul>
+            <li ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done" />
+            <span ng-class="{'done':todo.done}">{{todo.title}}</span>   
+            </li>
+        </ul>
+    </div>
+    <script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+    <script src="app/app.js" type="text/javascript"></script>
+    <script src="app/todo/controllers/todocontroller.js" type="text/javascript"></script>
+</body>
+</html>
