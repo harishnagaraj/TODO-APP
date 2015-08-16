@@ -13,7 +13,8 @@
             <input type="text" ng-model="newTodo" required />
             <button ng-disabled="frm.$invalid"> Go </button>
         </form>
-        <button ng-click="clearCompleted()">Clear Completed</button>
+        {{validationmessage}}
+        <button ng-click="finished()" ng-show="todos.length > 0">Clear Completed</button>
         <ul>
             <li ng-repeat="todo in todos">
             <input type="checkbox" ng-model="todo.done" />
